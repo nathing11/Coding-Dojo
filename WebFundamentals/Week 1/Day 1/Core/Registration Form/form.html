@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form action="/process" method="post">
+        <div>
+        <label for="">First name*</label>
+        <input type="text" name="first name" >
+        </div>
+        <div>
+            <label for="">Last name*</label>
+            <input type="text" name="last name" >
+        </div>
+        <div>
+            <label for="">Email Address*</label>
+            <input type="email" name="email" >
+            </div>
+        <div>
+            <label for="">Password*</label>
+            <input type="password" name="Password" >
+        </div>
+        <div>
+             <label for="">Confirm Password*</label>
+             <input type="password" name="Confirm Password" >
+        </div>
+        <div>
+            <label for="">Birthday:</label>
+            <input type="date" name="Birthday" >
+        </div>
+        <div>
+            <p>Gnder identity :</p>
+            <input type="radio" name="font" value="mole" id="mole">
+            <label for="bold">Mole</label>
+            <input type="radio" name="font" value="Femole" id="Femole">
+            <label for="normal">Femole</label>
+            <input type="radio" name="font" value="p" id="p">
+            <label for="bold">Non-binary</label>
+            <input type="radio" name="font" value="n" id="n">
+            <label for="normal">I prefer not no to answer</label>
+
+        </div>
+        <div>
+             <label for="">A short desciprtion about myself :</label>
+             <textarea name="comment" cols="20" rows="3"></textarea>
+        </div>
+        <div>
+             <label for="">Favorite language:</label>
+             <select name="language">
+                <option value="Almonds">Javascript</option>
+                <option value="Cheese and Crackers">Html</option>
+                <option value="Pita and Hummus">css</option>
+            </select>
+            
+        </div>
+        <div>
+            <input type="checkbox" name="Yes" >
+             <label for="">Yes , i would like to receive peroidic email updates</label>
+        </div>
+        <div>
+            <input type="submit" value="Creat Account" >
+        </div>
+    </form>
+    <p>*Indicates a required field</p>
+</body>
+</html>
