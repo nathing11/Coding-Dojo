@@ -1,6 +1,10 @@
+
 h1{
-    color: aqua;
+    color:aliceblue;
     background-color:black;
+}
+span{
+    color: aqua;
 }
 h2{
     background-color:blueviolet;
