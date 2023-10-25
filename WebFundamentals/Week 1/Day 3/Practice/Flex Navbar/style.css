@@ -1,0 +1,33 @@
+*{
+    margin: 0px auto;
+    color: white;
+    font-family: sans-serif;
+}
+.nav{
+    display: flex;
+    width: 70%;
+    height: 30px;
+    justify-content:space-between;
+    background-color: grey;
+    align-items: center;
+}
+.nav-links{
+    display: flex;
+    justify-content: center;
+    flex: 2;
+    list-style-type: none;
+
+}
+.nav-title{
+    flex:2;
+    margin-left: 10px;
+}
+#but{
+    background-color: aqua;
+
+}
+a{
+    text-decoration: none;
+    
+    
+}
