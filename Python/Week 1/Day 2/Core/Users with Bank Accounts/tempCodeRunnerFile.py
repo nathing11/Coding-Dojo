@@ -1,1 +1,0 @@
-user1.yield_interest(50)

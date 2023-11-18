@@ -17,5 +17,9 @@ def name(name):
 @app.route('/repeat/<int:nub>/<name>')          
 def numb(nub,name):
     return nub*name
+
+
+
+
 if __name__=="__main__":      
     app.run(debug=True)    
