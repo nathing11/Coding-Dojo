@@ -1,6 +1,6 @@
 from mysqlconnection import connectToMySQL
 from pprint import pprint
-DATABAYSE="users_schema"
+DATABAYSE="users"
 class User:
     def __init__( self , data ):
         self.id = data['id']

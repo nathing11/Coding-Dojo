@@ -7,14 +7,14 @@ def index():
 @app.route('/users')
 def users():
     return render_template("login.html",users=User.get_all())
-@app.route('/user/new')
+@app.route('/users/new')
 def new():
     return render_template("alluser.html")
 
-@app.route('/user/create',methods=['POST'])
+@app.route('/users/create',methods=['POST'])
 def create():
     print(request.form)
     User.save(request.form)
     return redirect('/users')
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run(debug=True , port=4789)
