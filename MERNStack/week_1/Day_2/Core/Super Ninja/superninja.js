@@ -25,7 +25,7 @@ class Sensei{
         this.speed="3";
         this.streangth="3";
     }
-    drinkSake(){
+    speakWisdom(){
         this.drinkSake();
         console.log("What one programmer can do in one month, two programmers can do in two months.");
         return this;
