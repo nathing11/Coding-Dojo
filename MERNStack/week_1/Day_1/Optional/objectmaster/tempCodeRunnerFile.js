@@ -1,0 +1,1 @@
+const  flying = pokémon.filter( p => p.types[1] === flying).map( p => p.types[0] );
