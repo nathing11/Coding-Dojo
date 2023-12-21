@@ -1,40 +1,46 @@
 // _______________________1_________________
+var hello
 console.log(hello);                                   
-var hello = 'world'; 
+hello = 'world'; 
 // undefined
 //word
 
 // _______________________2_________________
-var needle = 'haystack';
-test();
+var needle
 function test(){
-    var needle = 'magnet';
+    var needle 
+    needle = 'magnet';
     console.log(needle);
 }
+needle = 'haystack';
+test();
 //magnet
 
 
 
 // _______________________3_________________
-var brendan = 'super cool';
+var brendan
 function print(){
     brendan = 'only okay';
     console.log(brendan);
 }
+brendan = 'super cool';
 console.log(brendan);
 
 //only okay
 //super cool
 
 // _____________________4_________________
-var food = 'chicken';
-console.log(food);
-eat();
+var food
+food = 'chicken';
 function eat(){
     food = 'half-chicken';
     console.log(food);
-    var food = 'gone';
+    var food
+    food = 'gone';
 }
+console.log(food);
+eat();
 //chicken
 //half-chicken
 
@@ -45,7 +51,8 @@ console.log(food);
 var mean = function() {
     food = "chicken";
     console.log(food);
-    var food = "fish";
+    var food
+    food = "fish";
     console.log(food);
 }
 console.log(food);
@@ -55,14 +62,16 @@ console.log(food);
 // ____________________6_________________
 
 console.log(genre);
-var genre = "disco";
-rewind();
+var genre
 function rewind() {
     genre = "rock";
     console.log(genre);
-    var genre = "r&b";
+    var genre
+    genre = "r&b";
     console.log(genre);
 }
+genre = "disco";
+rewind();
 console.log(genre);
 //disco
 //r&b
@@ -75,7 +84,8 @@ learn();
 function learn() {
     dojo = "seattle";
     console.log(dojo);
-    var dojo = "burbank";
+    var dojo
+    dojo = "burbank";
     console.log(dojo);
 }
 console.log(dojo);
