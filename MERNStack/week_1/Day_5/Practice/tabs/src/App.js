@@ -1,10 +1,12 @@
 import './App.css';
-import Form from './components/Form';
+import Btn from './components/Btn';
+import List from './components/List';
 
 function App() {
   return (
     <div className="App">
-        <Form/>
+      <Btn/>
+      <List/>
     </div>
   );
 }

@@ -1,0 +1,25 @@
+*{
+    font-family: sans-serif;
+}
+div{
+    margin-top: 50px;
+}
+input{
+    border-radius: 6px;
+    height: 20px;
+    width:250px;
+    margin:20px;
+    border: 2px solid slategrey;
+    
+}
+
+button{
+    height: 25px;
+    border-radius: 6px;
+    border: none;
+    background-color: rgb(211, 194, 173);
+}
+button:hover{
+    background-color:darkgreen;
+
+}

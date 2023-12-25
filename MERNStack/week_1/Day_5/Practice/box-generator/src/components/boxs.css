@@ -1,0 +1,22 @@
+.boxs{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-around;
+}
+.box1{
+    /* background-color: aqua; */
+    width: 200px;
+    height: 200px;
+}
+.box2{
+    /* background-color: rgb(255, 0, 13); */
+    width: 200px;
+    height: 200px;
+}
+.box3{
+    /* background-color: rgb(0, 255, 64); */
+    width: 200px;
+    height: 200px;
+}

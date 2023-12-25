@@ -1,0 +1,16 @@
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    justify-items: center;
+}
+.btn1{
+    margin: 50px;
+    width:70px;
+    height: 40px;
+    border-radius: 5px;
+}
+.btn1:hover{
+    background-color: black;
+    color: aliceblue;
+}

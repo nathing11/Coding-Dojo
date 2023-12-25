@@ -1,12 +1,14 @@
-import './App.css';
-import Form from './components/Form';
 
-function App() {
+import './App.css';
+
+import Formm from './components/Formm';
+function App(props) {
+  
   return (
     <div className="App">
-        <Form/>
+        <Formm/>
+        
     </div>
   );
 }
-
 export default App;
