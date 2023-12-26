@@ -1,12 +1,15 @@
 import React from 'react'
 import './btn.css';
-function Btn() {
+const Btn = ({tab,idx,onClickHandler}) => {
+
     return (
-    <div className='btn'>
-        <button className='btn1'>Tab 1</button>
-        <button className='btn1'>Tab 2</button>
-        <button className='btn1'>Tab 3</button>
+    <div className='btn'> 
+            <div>
+                <button key={idx} onClick={() => onClickHandler(tab,idx)} className="btn1" >Tab {idx+1}</button>  
+            </div>
+        
     </div>
     )
-}
+    }
 export default Btn
+
