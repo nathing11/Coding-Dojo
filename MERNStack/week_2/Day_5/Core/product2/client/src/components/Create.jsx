@@ -30,7 +30,7 @@ function Create() {
             <label >Title:</label>
             <input onChange={(e)=>{setTitle(e.target.value)}} value={title}/>
             <label>Price:</label>
-            <input onChange={(e)=>{setPrice(e.target.value)}} value={price}/>
+            <input type='number' onChange={(e)=>{setPrice(e.target.value)}} value={price}/>
             <label>Description:</label>
             <input  onChange={(e)=>{setDescription(e.target.value)}} value={description}/>
             <button>Create</button>
