@@ -2,14 +2,18 @@
 public class Bat extends Mamal {
 	private int energy;
 	public Bat() {
-		// TODO Auto-generated constructor stub
 	}
 	public Bat(String name, int energy) {
-		super(name,energy);
-		this.energy = 300;
-		// TODO Auto-generated constructor stub
+        super(name, energy); 
+        this.energy = 300;
+    }
+	
+	public int getEnergy() {
+		return energy;
 	}
-
+	public void setEnergy(int energy) {
+		this.energy = energy;
+	}
 	public void fly(){
 		this.energy -= 50;
 		System.out.println( "the bat is airborne.");
@@ -24,11 +28,5 @@ public class Bat extends Mamal {
 	this.energy -= 100;
 	System.out.println( "the Bat Atack a town.");
 	}
-	public int getEnergy() {
-		return energy;
-	}
-	public void setEnergy(int energy) {
-		this.energy = energy;
-	}
-	
+
 }
