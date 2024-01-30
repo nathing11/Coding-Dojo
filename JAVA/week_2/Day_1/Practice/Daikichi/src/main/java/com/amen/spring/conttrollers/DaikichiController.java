@@ -6,10 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/daikichi")
 public class DaikichiController {
-	
 	@GetMapping("")
-	
-	   
 	    public String index(){
 	      return "Welocom";
 	    }
