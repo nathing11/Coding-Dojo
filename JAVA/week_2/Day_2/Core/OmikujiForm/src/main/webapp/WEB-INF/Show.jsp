@@ -13,12 +13,11 @@
 	<h1>Here's Your Omikuji!</h1>
 	<div class="container bg-primary text-white">
 		 In ${keynumber} years, you will live in ${keycity} with ${keyname}
-as your roommate, ${keyprof} for a living. The next time 
-you see a ${keything},you will have a good luck. 
-Also, ${keysomeNice}
+		 as your roommate, ${keyhobby} for a living. The next time 
+		 you see a ${keything},you will have a good luck. 
+		 Also, ${keysomeNice}
 	</div>
 	<a href="">Go Back</a>
-	
 <!-- For any Bootstrap that uses JS -->
 <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
 </body>

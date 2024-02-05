@@ -11,26 +11,30 @@
 </head>
 <body>
 	<h1 class="container text-danger">Send an Omikuji!</h1>
-    <form  action="/process" method= "POST" class="container">
+    <form  action="/processForm" method= "POST" class="container">
         <div class="form-group">
             <label for="number">Pick any number from 5 to 25</label>
             <input type="number" name="number" class="form-control">
         </div>
         <div class="form-group">
             <label for="name">Enter the name of any city</label>
+            <input type="text" name="city" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="hobby">Enter the name of any real person</label>
             <input type="text" name="name" class="form-control">
         </div>
         <div class="form-group">
-            <label for="hobby">Enter the profession of any real person</label>
+            <label for="type">Enter professional endeavor or hobby</label>
             <input type="text" name="hobby" class="form-control">
         </div>
         <div class="form-group">
             <label for="type">Enter any type of living thing</label>
-            <input type="text" name="type" class="form-control">
+            <input type="text" name="thing" class="form-control">
         </div>
         <div class="form-group">
             <label for="message">Say something nice to someone</label>
-            <textarea rows="5" class="form-control"></textarea>
+            <textarea rows="5" class="form-control" name="someNice"></textarea>
         </div>
         <div class="form-group">
             <label for="send">Send and show a friend</label>
