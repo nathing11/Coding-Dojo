@@ -17,7 +17,7 @@
 </head>
 <body>
 	<h2 class="container text-danger">New name</h2>
-    <form:form action="/dojo/processForm" method= "POST" class="container" modelAttribute="travel">
+    <form:form action="/dojos/processForm" method= "POST" class="container" modelAttribute="dojo">
    <p class="form-group">
             <form:label path="name">name</form:label>
             <form:errors path="name"/>

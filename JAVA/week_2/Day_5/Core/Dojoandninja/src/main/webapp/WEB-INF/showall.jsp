@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <%@ page isErrorPage="true" %>
 <!DOCTYPE html>
 <html>
@@ -13,30 +11,32 @@
     <script type="text/javascript" src="/js/app.js"></script><!-- Adjust the path to match your file/naming structure -->
 </head>
 <body>
-	<h1>Burbank Location Ninjas</h1>
-    <table class="table" >
-    <thead>
-      <tr>
-        <th scope="col">First Name</th>
-        <th scope="col">Last Name</th>
-        <th scope="col">Age</th>
-        <th scope="col">Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <c:forEach items="${allNinja }" var="oneNinja">
-				<tr>
-					<td><a href="/travels/${oneTravel.id}">${oneNinja.expense}</a></td>
-					<td>${oneNinja.vendor}</td>
-					<td>${oneNinja.amount}</td>
-					<td><a href="/travels/edit/${oneNinja.id }">Edit</a>
-					<form action="/${oneNinja.id}" method="post">
-					<input type="hidden" name="_method" value="delete"> 
-					<input type="submit" value="Delete">
-					</form></td>
-				</tr>
-		</c:forEach>
-    </tbody>
-  </table>
+    <h1>Burbank Location Ninjas</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <c:forEach items="${allNinjas}" var="oneNinja">
+                <tr>
+                	
+                    <td><a href="/ninjas/${oneNinja.id}">${oneNinja.firstName}</a></td>
+                    <td>${oneNinja.lasttName}</td>
+                    <td>${oneNinja.age}</td>
+                    <td>
+                        <form action="/ninjas/delete/ninja/${oneNinja.id}" method="post">
+                            <input type="hidden" name="_method" value="delete">
+                            <input type="submit" value="Delete">
+                        </form>
+                    </td>
+                </tr>
+            </c:forEach>
+        </tbody>
+    </table>
 </body>
 </html>

@@ -15,6 +15,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 import jakarta.persistence.Table;
+import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
@@ -28,14 +29,14 @@ public class Ninjamodel {
 	
 	@NotNull
 	@Size(min = 4, max = 100, message = "you need a name !")
-	private String FirstName;
+	private String firstName;
 	
 	@NotNull
 	@Size(min = 4, max = 100, message = "you need a lasttName !")
 	private String lasttName;
 	
 	@NotNull
-	@Size(min = 4, max = 100, message = "you need a lasttName !")
+	@Max(100)
 	private int age;
 
 
@@ -49,8 +50,8 @@ public class Ninjamodel {
 
     public Ninjamodel() {
     }
-    public Ninjamodel(String FirstName , String lasttName , int age )  {
-        this.FirstName = FirstName;
+    public Ninjamodel(String firstName , String lasttName , int age )  {
+        this.firstName = firstName;
         this.lasttName = lasttName;
         this.age = age;
     }
@@ -59,6 +60,11 @@ public class Ninjamodel {
     @JoinColumn(name="dojo_id")
     private Dojolmodel dojo;
     // Getters and setters
+
+	@PrePersist
+    protected void onCreate() {
+        this.createdAt = new Date();
+    }
 	public Long getId() {
 		return id;
 	}
@@ -66,16 +72,10 @@ public class Ninjamodel {
 		this.id = id;
 	}
 	public String getFirstName() {
-		return FirstName;
-	}
-	public Dojolmodel getDojo() {
-		return dojo;
-	}
-	public void setDojo(Dojolmodel dojo) {
-		this.dojo = dojo;
+		return firstName;
 	}
 	public void setFirstName(String firstName) {
-		FirstName = firstName;
+		this.firstName = firstName;
 	}
 	public String getLasttName() {
 		return lasttName;
@@ -101,10 +101,12 @@ public class Ninjamodel {
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
 	}
-	@PrePersist
-    protected void onCreate() {
-        this.createdAt = new Date();
-    }
+	public Dojolmodel getDojo() {
+		return dojo;
+	}
+	public void setDojo(Dojolmodel dojo) {
+		this.dojo = dojo;
+	}
 	@PreUpdate
     protected void onUpdate() {
         this.updatedAt = new Date();

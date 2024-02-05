@@ -16,13 +16,18 @@
 <link rel="stylesheet" href="/css/main.css"/>
 </head>
 <body>
-	<h1>Save Travels</h1>
+	<h1>Save Dojo</h1>
 	<h2 class="container text-danger">New Ninja</h2>
-    <form:form action="/ninja/processForm" method= "POST" class="container" modelAttribute="travel">
+    <form:form action="/ninjas/processForm" method= "POST" class="container" modelAttribute="ninja">
    <p class="form-group">
-            <form:label path="expense">dojo</form:label>
-            <form:errors path="expense"/>
-            <form:input path="expense" class="form-control"/>
+            <form:label path="dojo">Dojo</form:label>
+				<form:select path="dojo">
+				<c:forEach items="${allDojos}" var="dojo">
+				<option value="${dojo.id}">
+				${dojo.name}
+				</option>
+				</c:forEach>
+				</form:select>
         </p>
     <p class="form-group">
         <form:label path="FirstName">First name</form:label>

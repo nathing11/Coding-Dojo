@@ -11,25 +11,45 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-
+import com.amen.onetomeny.models.Dojolmodel;
 import com.amen.onetomeny.models.Ninjamodel;
+import com.amen.onetomeny.services.Dojolservice;
 import com.amen.onetomeny.services.Ninjaservice;
 
 import jakarta.validation.Valid;
 
 @Controller
+@RequestMapping("/ninjas")
 public class NinjaController {
+	
 	@Autowired
 	private Ninjaservice Ninjalserv;
-	@GetMapping("/new/ninja")
+	@Autowired
+	private Dojolservice dojolserv;
+	
+	
+	@GetMapping("")
+	public String show(@ModelAttribute("ninja") Ninjamodel ninja , Model model) {
+		List<Ninjamodel> allNinjas = Ninjalserv.allNinjas();
+		model.addAttribute("allNinja",allNinjas	);
+		List<Dojolmodel> allDojos = dojolserv.allDojo();
+		model.addAttribute("allDojos", allDojos);
+		return "showall.jsp";
+	}
+	@GetMapping("/new")
 	public String home(@ModelAttribute("ninja") Ninjamodel ninja , Model model) {
 		List<Ninjamodel> allNinja = Ninjalserv.allNinjas();
 		model.addAttribute("allNinja",allNinja);
+		List<Dojolmodel> allDojos = dojolserv.allDojo();
+		model.addAttribute("allDojos", allDojos);
 		return "Ninjas.jsp";
 	}
-	@PostMapping("/ninja/processForm")
-	public String createTravel(@Valid @ModelAttribute("ninja") Ninjamodel ninja, BindingResult result , Model model) {
+	
+	
+	@PostMapping("/processForm")
+	public String createDojo(@Valid @ModelAttribute("ninja") Ninjamodel ninja, BindingResult result , Model model) {
 		if (result.hasErrors()) {
 			List<Ninjamodel> allNinja = Ninjalserv.allNinjas();
 			model.addAttribute("allNinja",allNinja);
@@ -37,9 +57,8 @@ public class NinjaController {
 		}
 		else {
 			Ninjalserv.createNinja(ninja);
-			return "redirect:/new/ninja";
+			return "redirect:/ninjas/new";
 		}
-		
 	}
 	@DeleteMapping("/new/ninja/{id}")
 	public String deleteTravel(@PathVariable("id") Long id) {

@@ -10,28 +10,28 @@ import com.amen.onetomeny.repositories.DojoRepositories;
 
 @Service
 public class Dojolservice {
-    // adding the travel repository as a dependency
+    // adding 
     private final DojoRepositories dojoRepositories;
     
     public Dojolservice(DojoRepositories dojoRepositories) {
         this.dojoRepositories = dojoRepositories;
     }
 
-    // returns all the travels
+    // returns all 
     public List<Dojolmodel> allDojo() {
         return dojoRepositories.findAll();
     }
 
-    // creates a travel
+    // creates 
     public Dojolmodel createDojo(Dojolmodel dojo) {
         return dojoRepositories.save(dojo);
     }
     // READ ONE 
-    // retrieves a travel
-    public Dojolmodel findTravel(Long id) {
-        Optional<Dojolmodel> optionalTravel = dojoRepositories.findById(id);
-        if(optionalTravel.isPresent()) {
-            return optionalTravel.get();
+    // retrieves 
+    public Dojolmodel findDojo(Long id) {
+        Optional<Dojolmodel> optionalDojo = dojoRepositories.findById(id);
+        if(optionalDojo.isPresent()) {
+            return optionalDojo.get();
         } else {
             return null;
         }

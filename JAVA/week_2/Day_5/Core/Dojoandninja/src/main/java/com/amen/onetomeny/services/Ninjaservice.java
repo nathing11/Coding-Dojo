@@ -3,9 +3,13 @@ package com.amen.onetomeny.services;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import com.amen.onetomeny.models.Ninjamodel;
 import com.amen.onetomeny.repositories.Ninjarepositorie;
 
+
+@Service
 public class Ninjaservice {
 
     private final Ninjarepositorie ninjarepositorie;
